@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+	
+	<!--  xml 이 추가되어도 java 코드는 변경하지 않아도 된다. -->
+	<import resource="classpath:config/beans2.xml"/>
+	<bean id="hello" class="com.study.spring.Hello"> 
+		<property name="name" value="홍길동"/> 
+		<property name="nickname"> 
+			<value>전우치</value> 
+		</property> 
+	<property name="printer" ref="printerA"/> 
+	<!-- <property name="printer"> 
+	<ref bean="printerB"/> 
+	</property> --> 
+	</bean>
+	
+
+</beans>
+ 
